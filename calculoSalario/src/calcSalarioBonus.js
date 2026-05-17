@@ -22,3 +22,15 @@ Retornar o valor do salário somado com o bonus, conforme a senioridade do funci
 
 */
 
+export function calcSalarioBonus(salario, senioridade) {
+    if(senioridade === "junior") {
+        return salario + 50;
+    }       
+        else if(senioridade === "pleno") {   
+            return salario + 100;   
+    }
+        else if(senioridade === "senior") {
+            return salario + 1000;}
+        
+        }
+        console
