@@ -18,7 +18,7 @@ describe("Testes para a função calcSalarioBonus", () => {
     if("Deve retornar o salário com bônus para um funcionário senior", () => {
         const salario = 5000;
         const senioridade = "senior";
-        const resultado = calcSalarioBonus(salario, senioridade);
+        const resultado = calcSal   arioBonus(salario, senioridade);
         assert.strictEqual(resultado, 6000);
     } );
     it("Deve retornar o salário sem bônus para um funcionário com senioridade inválida", () => {

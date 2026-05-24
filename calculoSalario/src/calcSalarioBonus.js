@@ -12,10 +12,9 @@ A função deve retornar o valor do salário já com bônus embutido.
 + Senioridade deve ser uma string com os seguintes valores: "junior", "pleno" ou "senior";
 
 3. Processamento
-+ Bonus junior = 50;
-+ Bonus pleno = 100;
-+ Bonus senior = 1000;
-+ Salário final = salário + bônus;
++ Bonus junior = salario + 50;
++ Bonus pleno = salario + 100;
++ Bonus senior = salario + 1000;
 
 4. Saídas
 Retornar o valor do salário somado com o bonus, conforme a senioridade do funcionário.
@@ -23,14 +22,17 @@ Retornar o valor do salário somado com o bonus, conforme a senioridade do funci
 */
 
 export function calcSalarioBonus(salario, senioridade) {
-    if(senioridade === "junior") {
+    if(senioridade == "junior") {
         return salario + 50;
-    }       
-        else if(senioridade === "pleno") {   
+        }       
+        else if(senioridade == "pleno") {   
             return salario + 100;   
-    }
-        else if(senioridade === "senior") {
-            return salario + 1000;}
-        
         }
-        console
+        else if(senioridade == "senior") {
+            return salario + 1000;
+        }
+    }
+
+function validarSenioridade(senioridade) {
+    
+}
