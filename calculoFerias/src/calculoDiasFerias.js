@@ -22,7 +22,13 @@ Saídas:
 */
 
 export function calculoDiasFerias(salarioMensal, diasVendidos){
+    //Regras
+    if (diasVendidos < 1 || diasVendidos > 30) {
+        throw new Error("Quantidade de dias vendidos inválida. Deve ser um valor entre 1 e 30.");
+        //throw é de lançar um novo erro em tela
+    }
+    //Processamento
     const valorPeloDiaFerias = salarioMensal / 30;
         return valorPeloDiaFerias * diasVendidos;
     }
-    console.log(calculoDiasFerias(3000, 1));
+    console.log(calculoDiasFerias(3000, 31));
