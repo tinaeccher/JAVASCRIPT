@@ -112,19 +112,28 @@ export function adicionarProduto(produto) {
 
 console.log( "Adicionado Iphone17: " + produtos.at(-1).preco); //imprime o vetor produtos no console, mostrando todos os objetos e suas propriedades, incluindo o novo produto adicionado.
 
-//passar por todos os elementos do vetor de produtos e imprimir o valor do vetor que tem o nome 'passatempo'
+//Passa pro todos os produtos cadastrados e lista o preço
+for ( let i = 0; i < produtos.length; i++){ //passar por todos os elementos do vetor de produtos
+        console.log("Mostra o precço de todos os produtos: " + produtos.at(i).preco); //imprimir o preço do produto filtrado
+        }
+
+
+//passar por todos os elementos do vetor de produtos com produtos.leght retorna o tamanho do vetor
+// imprimir o valor do vetor que tem o nome 'passatempo'
 for ( let i = 0; i < produtos.length; i++){ //passar por todos os elementos do vetor de produtos
     if (produtos[i].nome == 'Iphone') { //filtrar o vetor de produtos para encontrar o produto com o nome 'passatempo'
-        console.log("Preço do Iphone: " + produtos.at(i).preco); //imprimir o preço do produto encontrado
+        console.log("Preço do Iphone: " + produtos.at(i).preco); //imprimir o preço do produto filtrado
         }
     }
 
 
-//passar por todos os elementos do vetor de produtos e imprimir o valor do vetor 
+//passar por todos os elementos do vetor de produtos e 
+// verificar qual produto começa com Notebook e mostrar o valor dele.
 for ( let f = 0; f < produtos.length; f++){
     if (produtos.at(f).nome.startsWith("Notebook") ){
-        console.log( "Preço do Notebook: " + produtos.at(f).preco);
+        console.log( "Preço do Notebookxx: " + produtos.at(f).preco);//mostra os produtos e o preço
         }
     }
 
     console.log(produtos);
+
