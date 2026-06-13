@@ -109,3 +109,18 @@ export function adicionarProduto(produto) {
     
 
 }
+
+//passar por todos os elementos do vetor de produtos e imprimir o valor do vetor que tem o nome 'passatempo'
+for ( let i = 0; i < produtos.length; i++){ //passar por todos os elementos do vetor de produtos
+    if (produtos[i].nome == 'biscoito passatempo') { //filtrar o vetor de produtos para encontrar o produto com o nome 'passatempo'
+        console.log("Preço do passatempo: " + produtos.at(i).preco); //imprimir o preço do produto encontrado
+        }
+    }
+
+
+//passar por todos os elementos do vetor de produtos e imprimir o valor do vetor 
+for ( let f = 0; f < produtos.length; f++){
+    if (produtos.at(f).nome.startsWith("biscoito") ){
+        console.log( "Preço do biscoito: " + produtos.at(f).preco);
+        }
+    }
