@@ -65,18 +65,15 @@ console.log(nomeAtual + 'mudou para' + novoNome);
 console.log(produto);
 */
 
-/*
-
 //COMO FAZER PARA ADICIONAR UM NOVO PRODUTO EM UM VETOR,
 
-produto.push({ //método push para adicionar um novo objeto ao final do vetor produtos
-    nome: "Samsung Galaxy S21", //propriedade nome - valor "Samsung Galaxy S21"
-    preco: 799.99, //propriedade preco - valor 799.99
+produtos.push({ //método push para adicionar um novo objeto ao final do vetor produtos
+    nome: "Notebook Mcbook Pro", //propriedade nome - valor "Samsung Galaxy S21"
+    preco: 21799.99, //propriedade preco - valor 799.99
     quantidade: 8 //propriedade quantidade - valor 8
 });
-console.log(produto);
+console.log( "Adicionado Notebook Mcbook: " + produtos.at(-1).nome);;
 //imprime o vetor produto no console, mostrando todos os objetos e suas propriedades, incluindo o novo produto adicionado.
-*/
 
 //FAÇA UMA FUNÇÃO PARA RETORNAR O NOME 
 // De um dOS PRODUTOS A PARTIR DO SEU ÍNDICE NO VETOR.
@@ -104,23 +101,30 @@ export function adicionarProduto(produto) {
         // indicando que o nome do produto é um campo obrigatório e não pode ser deixado em branco.
     }
 
-    produtos.push(produto); //método push para adicionar o novo produto ao final do vetor produtos, onde produtos é o objeto que representa o novo produto a ser adicionado, contendo as propriedades nome, preço e quantidade.});
+    produtos.push({ //método push para adicionar um novo objeto ao final do vetor produtos
+        nome: "Iphone 17 Pro", //propriedade nome - valor "Samsung Galaxy S21"
+        preco: 11799.99, //propriedade preco - valor 799.99
+        quantidade: 10 //propriedade quantidade - valor 8
+    }); //método push para adicionar o novo produto ao final do vetor produtos, onde produtos é o objeto que representa o novo produto a ser adicionado, contendo as propriedades nome, preço e quantidade.});
     return produtos.at(-1).nome; //retorna o ultimo produto adicionado no veto -> at(-1) com a propriedade nome
     
-
 }
+
+console.log( "Adicionado Iphone17: " + produtos.at(-1).preco); //imprime o vetor produtos no console, mostrando todos os objetos e suas propriedades, incluindo o novo produto adicionado.
 
 //passar por todos os elementos do vetor de produtos e imprimir o valor do vetor que tem o nome 'passatempo'
 for ( let i = 0; i < produtos.length; i++){ //passar por todos os elementos do vetor de produtos
-    if (produtos[i].nome == 'biscoito passatempo') { //filtrar o vetor de produtos para encontrar o produto com o nome 'passatempo'
-        console.log("Preço do passatempo: " + produtos.at(i).preco); //imprimir o preço do produto encontrado
+    if (produtos[i].nome == 'Iphone') { //filtrar o vetor de produtos para encontrar o produto com o nome 'passatempo'
+        console.log("Preço do Iphone: " + produtos.at(i).preco); //imprimir o preço do produto encontrado
         }
     }
 
 
 //passar por todos os elementos do vetor de produtos e imprimir o valor do vetor 
 for ( let f = 0; f < produtos.length; f++){
-    if (produtos.at(f).nome.startsWith("biscoito") ){
-        console.log( "Preço do biscoito: " + produtos.at(f).preco);
+    if (produtos.at(f).nome.startsWith("Notebook") ){
+        console.log( "Preço do Notebook: " + produtos.at(f).preco);
         }
     }
+
+    console.log(produtos);
