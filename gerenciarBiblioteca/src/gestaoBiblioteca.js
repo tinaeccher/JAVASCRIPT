@@ -1,29 +1,35 @@
+//Crie um vetor com 5 elementos com as propriedades id, titulo, tema e preço
 const livros = [
     {
-        id: '001',
+        id: 1,
         titulo: 'Lógica de Programação',
         tema: 'Computação',
         preco: 122.00
     },
     {
-        id: '002',
+        id: 2,
         titulo: 'Java for Dummies',
         tema: 'Computação',
         preco: 92.00
     },
     {
-        id: '003',
-        titulo: 'Receitas Fitness',
-        tema: 'Gastronomia',
+        id: 3,
+        titulo: 'The Art of Software Testing',
+        tema: 'Test Software',
         preco: 32.00
     },
     {
-        id: '004',
-        titulo: 'Mochileiro das galaxias',
+        id: 4,
+        titulo: 'Agile Testing',
+        tema: 'Metodologias Ágeis',
+        preco: 33.00
+    },
+    {
+        id: 5,
+        titulo: 'Explore it!',
         tema: 'Ficção',
         preco: 33.00
     }
-
 ]
 
 livros.push({
@@ -35,11 +41,15 @@ livros.push({
 
  console.log("O ultimo livro adicionado: " + livros.at(-1).titulo);
 
-export function buscarLivroPorID(livro){
-    for (let i = 0; i < livros.lenght; i++){
-        if (livros[i].id == 99){
-       
-        }  
-    }
+
+//Crie uma função que receba o ID de um livro e retorne o seu título
+//Exemplo: buscarTituloDoLivroPorID(99) -> 'Título do Livro ID 99'
+export function buscarTituloDoLivroPorID(id){ //função para o ID que simplica a busca
+    for (let i = 0; i < livros.lenght; i++){ //for para passar em todos os objetos do vetores
+        if (livros[i].id == id){ //se o livro que estou procurando tem o ID que filtrei
+            return livros[i].titulo; //retorna o título do livro do id.
+
+        }
+    };
 }
-console.log("livro de id 99 é:" + livros.at(-1).titulo); //imprimir o livro
+console.log("livro de id 99 é: " + livros.at(-1).titulo); //imprimir o livro

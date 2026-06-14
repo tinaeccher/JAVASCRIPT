@@ -13,5 +13,7 @@
   "author": "",
   "license": "ISC",
   "type": "module",
-  "github.copilot.enable": false
+  "dependencies": {
+    "mocha": "^11.7.6"
+  }
 }
