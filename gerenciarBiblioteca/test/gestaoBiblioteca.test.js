@@ -25,7 +25,7 @@ describe('Testando funções da Gestão de Biblioteca', function() {
         assert.throws(
             function () {buscarTituloDoLivroPorID(null) },
                 {
-                    message:'0 ID precisa ser maior que zero'
+                    message:'O Id precisa ser informado.'
                 }
         );
     });
@@ -34,7 +34,7 @@ describe('Testando funções da Gestão de Biblioteca', function() {
         assert.throws(
             function () {buscarTituloDoLivroPorID() },
                 {
-                    message:'0 ID precisa ser maior que zero'
+                    message:'O Id precisa ser informado.'
                 }
             );
     });
@@ -42,7 +42,7 @@ describe('Testando funções da Gestão de Biblioteca', function() {
         assert.throws(
             function () {buscarTituloDoLivroPorID(0) },
                 {
-                    message:'0 ID precisa ser maior que zero'
+                    message:'O Id precisa ser informado.'
                 }
         );
     });
