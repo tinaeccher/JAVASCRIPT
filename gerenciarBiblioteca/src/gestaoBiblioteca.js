@@ -71,6 +71,6 @@ export function buscarTituloDoLivroPorID(id){ //função para o ID que simplica 
 
     console.log(livros)
 
-    //gerar relatório mochawesome
+    //gerar relatório mochawesome -> NPM TEST
     //deverá rodar o código npm i mochawesome
     //npx mocha --reporter mochawesome
