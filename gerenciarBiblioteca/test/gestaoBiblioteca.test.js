@@ -2,7 +2,7 @@ import { buscarTituloDoLivroPorID } from "../src/gestaoBiblioteca.js";
 import assert from 'node:assert';
 
 describe('Testando funções da Gestão de Biblioteca', function() {
-    it('Validar o Título do ultimo livro cadastrado', function() {
+    it('Validar que informo o Título do Livro quando informo um ID válido', function() {
         
         //Act - agir - passando as entradas necessárias para armazenamento
         const retornoDaFuncao = buscarTituloDoLivroPorID(5);
@@ -10,4 +10,41 @@ describe('Testando funções da Gestão de Biblioteca', function() {
         //ASSERT - 
         assert.equal(retornoDaFuncao, 'Explore it!');
     });
+
+    it('Validar que uma msg é apresentada quando um ID não é encontrado,', function() {
+        
+        //Act - agir - passando as entradas necessárias para armazenamento
+        const retornoDaFuncao = buscarTituloDoLivroPorID(9999);
+
+        //ASSERT - 
+        assert.equal(retornoDaFuncao, 'ID não encontrado');
+    });
+
+    it("Validando que emite mensagem de erro quando o id é Nulo", function(){
+
+        assert.throws(
+            function () {buscarTituloDoLivroPorID(null) },
+                {
+                    message:'0 ID precisa ser maior que zero'
+                }
+        );
+    });
+
+    it("Validando que emite mensagem quando o id não é informado", function(){
+        assert.throws(
+            function () {buscarTituloDoLivroPorID() },
+                {
+                    message:'0 ID precisa ser maior que zero'
+                }
+            );
+    });
+    it("Validando que emite mensagem quando o id é zero", function(){
+        assert.throws(
+            function () {buscarTituloDoLivroPorID(0) },
+                {
+                    message:'0 ID precisa ser maior que zero'
+                }
+        );
+    });
+        
 });
