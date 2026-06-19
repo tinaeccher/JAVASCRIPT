@@ -35,8 +35,12 @@ for(let i =0; i < pessoas.length; i++){
 //for each espera que passe uma função anônima dentro dele
 //foreach é uma função que esta dentro de uma lista
 //foreach eespera que a funcao anonima tenha um parametro que represente o item atual
-pessoas.forEach(function(pessoa){
+pessoas.forEach(function(pessoa){ //O forEach sempre passa a 
     console.log(pessoa.nome, pessoa.idade)
     //template string
-
 })
+
+pessoas.forEach(function(element, index, pessoa){ //O forEach sempre passa a 
+     console.log(`Elemento: ${element}, Índice: ${index}`)
+    }
+)
