@@ -1,7 +1,7 @@
 const usuarios = [
     {
         nome: 'Maria da Silva',
-        login: 'maria.silva@gmail.com',XMLDocument
+        login: 'maria.silva@gmail.com',
         senha: '1357'
     },
     {
@@ -30,7 +30,6 @@ const usuarios = [
 
 2. Regras (Regras quanto ao que foi infomado, não são regras de negócio)
 - Senha e Login devem ser alfanuméricos
-- 
 
 3. Processamento
 - Se percorrer a lista, encontrar um usuário com login e senha iguais aos informados, retornar Login com sucesso.
@@ -41,8 +40,11 @@ const usuarios = [
 
 */
     export function realizarLogin (login,senha){
-        for (usuario of usuarios){
-            
+    //laço com for of -- para identificar apenas uma opção 
+        for (let usuario of usuarios){
+            if(usuario.login == login && usuario.senha == senha){
+                return 'Logado com sucesso.'
+            }
         }
+            return 'Usuario não encontrado.';
     }
-
